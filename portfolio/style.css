@@ -450,6 +450,10 @@ a {
   box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
 }
 .back-to-top img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
   pointer-events: none;
   filter: brightness(0) invert(1);
 }
