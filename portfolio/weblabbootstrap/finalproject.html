@@ -1,0 +1,537 @@
+
+<!-- Ethio connect project  -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EthioConnect</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap");
+
+    html { scroll-behavior: smooth; scroll-padding-top: 75px; }
+    body { font-family: "Plus Jakarta Sans", sans-serif; color: #2b2f33; background-color: #ffffff; overflow-x: hidden; }
+
+    .btn-success-custom { background-color: #2563eb; border-color: #2563eb; color: #ffffff; font-weight: 600; transition: all 0.3s ease; }
+    .btn-success-custom:hover, .btn-success-custom:focus { background-color: #1d4ed8; border-color: #1d4ed8; color: #ffffff; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3); }
+
+    .btn-hover-effect { transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+    .btn-hover-effect:hover { transform: scale(1.04); filter: brightness(1.15); }
+
+    .custom-navbar { box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); border-bottom: 2px solid #0f2a4a; }
+    .custom-navbar .nav-link { font-weight: 500; transition: color 0.3s ease, transform 0.2s ease; }
+    .custom-navbar .nav-link:hover { color: #60a5fa !important; transform: translateY(-1px); }
+
+    .hero-section { background: linear-gradient(135deg, #071b3d 0%, #102a4f 50%, #081427 100%); padding-top: 120px; padding-bottom: 120px; }
+    .hero-heading { text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.5); font-weight: 800; }
+    .hero-badge { background-color: rgba(96, 165, 250, 0.15); color: #93c5fd; letter-spacing: 2px; font-weight: 700; border: 1px solid rgba(96, 165, 250, 0.3); }
+
+    .feature-card { transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease; border: none; }
+    .feature-card:hover { transform: translateY(-8px); box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12) !important; }
+    .feature-icon { font-size: 2.5rem; display: inline-block; margin-bottom: 1rem; }
+
+    .stat-strip { background-color: #0d2544; border-top: 1px solid rgba(255, 255, 255, 0.05); border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+    @media (min-width: 768px) {
+      .stat-col:not(:last-child) { border-right: 1px solid rgba(255, 255, 255, 0.15); }
+    }
+
+    .team-card .team-avatar { width: 130px; height: 130px; object-fit: cover; border: 4px solid #f8f9fa; transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+    .team-card:hover .team-avatar { transform: scale(1.1); border-color: #60a5fa; }
+
+    .social-btn { width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; background-color: #f1f3f5; color: #495057; text-decoration: none; transition: all 0.2s ease; font-size: 0.9rem; }
+    .social-btn:hover { background-color: #0d2544; color: #ffffff; }
+    .social-btn svg { width: 16px; height: 16px; }
+    .social-btn.github { color: #ffffff; }
+    .social-btn.linkedin { color: #0a66c2; }
+    .social-btn.x { color: #ffffff; }
+    .social-btn.linkedin:hover { background-color: #0a66c2; color: #ffffff; }
+    .social-btn.x:hover { background-color: #1d9bf0; color: #ffffff; }
+
+    ::-webkit-scrollbar { width: 10px; }
+    ::-webkit-scrollbar-track { background: #071b3d; }
+    ::-webkit-scrollbar-thumb { background: #60a5fa; border-radius: 5px; }
+    ::-webkit-scrollbar-thumb:hover { background: #3b82f6; }
+
+.text-gradient { 
+    background: linear-gradient(45deg, #60a5fa, #bfdbfe); 
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}
+    .form-control:focus, .form-select:focus { border-color: #60a5fa; box-shadow: 0 0 0 0.25rem rgba(96, 165, 250, 0.25); }
+
+    /* Dark mode */
+    body.dark-mode { background-color: #0a1220; color: #e2e8f0; }
+    body.dark-mode .navbar, body.dark-mode footer { background-color: #101827 !important; border-color: rgba(255, 255, 255, 0.08) !important; }
+    body.dark-mode .navbar .navbar-brand, body.dark-mode .navbar .nav-link, body.dark-mode footer, body.dark-mode footer a,
+    body.dark-mode .text-muted, body.dark-mode .text-muted-light, body.dark-mode .card, body.dark-mode .accordion-button,
+    body.dark-mode .form-control, body.dark-mode .form-select, body.dark-mode .social-btn { color: #d1d5db !important; }
+    body.dark-mode .navbar .nav-link:hover { color: #93c5fd !important; }
+    body.dark-mode .navbar .nav-link.active { color: #93c5fd !important; }
+    body.dark-mode .navbar .navbar-brand { color: #f8fafc !important; }
+    body.dark-mode .btn-outline-primary { color: #bfdbfe; border-color: #3b82f6; }
+    body.dark-mode .btn-outline-primary:hover, body.dark-mode .btn-success-custom:hover, body.dark-mode .btn-hover-effect:hover { filter: brightness(1.05); }
+    body.dark-mode .hero-section { background: linear-gradient(135deg, #020617 0%, #0c1630 50%, #081025 100%); }
+    body.dark-mode .bg-white { background-color: #0f172a !important; }
+    body.dark-mode .bg-light { background-color: #111827 !important; }
+    body.dark-mode .bg-light-grey, body.dark-mode #faq { background-color: #111827 !important; }
+    body.dark-mode .card { background-color: #11223a; border-color: rgba(148, 163, 184, 0.18); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35) !important; }
+    body.dark-mode .feature-card:hover { box-shadow: 0 12px 24px rgba(0, 0, 0, 0.45) !important; }
+    body.dark-mode .stat-strip { background-color: #0b1220; }
+    body.dark-mode .team-card .team-avatar { border-color: #1e293b; }
+    body.dark-mode .social-btn { background-color: #1f2937; color: #d1d5db; }
+    body.dark-mode .social-btn:hover { background-color: #2563eb; color: #ffffff; }
+    body.dark-mode .accordion-button { background-color: #11223a; }
+    body.dark-mode .accordion-button:not(.collapsed) { background-color: #1c2a44; }
+    body.dark-mode .form-control, body.dark-mode .form-select { background-color: #111827; border-color: #334155; }
+    body.dark-mode .form-control:focus, body.dark-mode .form-select:focus { border-color: #60a5fa; box-shadow: 0 0 0 0.25rem rgba(96, 165, 250, 0.35); }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top custom-navbar">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-4" href="#home">EthioConnect <span class="text-primary">🇪🇹</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+          <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+          <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+        <div class="d-flex ms-auto align-items-center gap-2">
+          <button id="themeToggleBtn" type="button" class="btn btn-outline-light px-4 py-2 rounded-pill shadow-sm">Dark / Light</button>
+          <a href="#contact" class="btn btn-success-custom px-4 py-2 rounded-pill shadow-sm">Join the Network</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section id="home" class="hero-section text-white d-flex align-items-center">
+    <div class="container text-center">
+      <span class="badge hero-badge px-3 py-2 text-uppercase mb-3 rounded">The Future of Ethiopian Tech</span>
+      <h1 class="display-3 hero-heading mb-3">Connecting Ethiopian <span class="text-gradient">Tech Pioneers</span> Globally</h1>
+      <p class="lead text-muted-light col-lg-8 mx-auto mb-5 text-white-50 fs-5">
+        Empowering developers, engineers, and tech innovators within Ethiopia and across the diaspora to collaborate, exchange resources, and build local solutions.
+      </p>
+
+      <div class="d-grid d-md-flex gap-3 justify-content-md-center mb-5">
+        <a href="#contact" class="btn btn-success-custom btn-hover-effect btn-lg px-5 py-3">Explore Careers</a>
+        <a href="#features" class="btn btn-outline-primary btn-hover-effect btn-lg px-5 py-3">Learn More</a>
+      </div>
+
+      <div class="row pt-4 border-top border-secondary border-opacity-25 mt-4 justify-content-center">
+        <div class="col-4 col-md-2"><h4 class="fw-bold mb-0 text-white">15K+</h4><small class="text-white-50">Members</small></div>
+        <div class="col-4 col-md-2"><h4 class="fw-bold mb-0 text-white">200+</h4><small class="text-white-50">Companies</small></div>
+        <div class="col-4 col-md-2"><h4 class="fw-bold mb-0 text-white">50+</h4><small class="text-white-50">Events</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="py-5 bg-white">
+    <div class="container py-4 text-center">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <span class="text-primary fw-bold text-uppercase small tracking-wide">Who We Are</span>
+          <h2 class="fw-bold mt-2">Bridging Talents Across the Nation</h2>
+          <p class="text-muted mt-3">
+            EthioConnect serves as a bridge for software engineers, database administrators, and full-stack devs based anywhere from Addis Ababa to the global tech hubs, establishing high-impact engineering pipelines.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="py-5 bg-light">
+    <div class="container py-4">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Why EthioConnect?</h2>
+        <p class="text-muted col-md-6 mx-auto">Discover the foundational features designed to elevate your technical capabilities and network scope within the ecosystem.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm feature-card p-4">
+            <div class="card-body">
+              <span class="feature-icon" aria-hidden="true">🤝</span>
+              <h5 class="card-title fw-bold">Professional Networking</h5>
+              <p class="card-text text-muted">Establish verified connections with top Ethiopian software practitioners. Form deep developmental relationships and local project clusters seamlessly.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm feature-card p-4">
+            <div class="card-body">
+              <span class="feature-icon" aria-hidden="true">💻</span>
+              <h5 class="card-title fw-bold">Targeted Job Board</h5>
+              <p class="card-text text-muted">Access curated lists of domestic tech options and premier remote jobs seeking local talent. Streamline applications quickly.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm feature-card p-4">
+            <div class="card-body">
+              <span class="feature-icon" aria-hidden="true">🎤</span>
+              <h5 class="card-title fw-bold">Tech Events & Hackathons</h5>
+              <p class="card-text text-muted">Participate in monthly structural hackathons and system architecture webinars. Stay in step with emerging framework updates.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm feature-card p-4">
+            <div class="card-body">
+              <span class="feature-icon" aria-hidden="true">🧠</span>
+              <h5 class="card-title fw-bold">Continuous Learning</h5>
+              <p class="card-text text-muted">Engage with localized sandbox environments, algorithm design modules, and shared code review architectures inside groups.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm feature-card p-4">
+            <div class="card-body">
+              <span class="feature-icon" aria-hidden="true">💡</span>
+              <h5 class="card-title fw-bold">Expert Mentorship</h5>
+              <p class="card-text text-muted">Gain invaluable architecture feedback from top engineers in the diaspora who have scaled enterprise cloud platforms globally.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm feature-card p-4">
+            <div class="card-body">
+              <span class="feature-icon" aria-hidden="true">🚀</span>
+              <h5 class="card-title fw-bold">Open Source Ecosystem</h5>
+              <p class="card-text text-muted">Collaborate on public utility code, local translation assets, and optimized libraries fine-tuned for local infrastructure networks.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stat-strip text-white py-5">
+    <div class="container">
+      <div class="row g-4 text-center">
+        <div class="col-6 col-md-3 stat-col"><div class="display-5 fw-bold text-white">15,400+</div><div class="small text-white-50 text-uppercase tracking-wider">Active Members</div></div>
+        <div class="col-6 col-md-3 stat-col"><div class="display-5 fw-bold text-white">340+</div><div class="small text-white-50 text-uppercase tracking-wider">Partner Firms</div></div>
+        <div class="col-6 col-md-3 stat-col"><div class="display-5 fw-bold text-white">12+</div><div class="small text-white-50 text-uppercase tracking-wider">Cities Covered</div></div>
+        <div class="col-6 col-md-3 stat-col"><div class="display-5 fw-bold text-white font-monospace">180+</div><div class="small text-white-50 text-uppercase tracking-wider">Events Hosted</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="team" class="py-5 bg-white">
+    <div class="container py-4">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Meet Our Leadership Team</h2>
+        <p class="text-muted col-md-6 mx-auto">Dedicated innovators spearheading technical integration and building community resources across regions.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="card h-100 border-0 text-center team-card">
+            <div class="pt-3"><img src="images/newphoto.jpg" alt="Brook Gizachew Profile Avatar" class="rounded-circle team-avatar shadow-sm"></div>
+            <div class="card-body">
+              <h5 class="fw-bold mb-1">Brook Gizachew</h5>
+              <p class="text-success small fw-semibold uppercase mb-2 text-black">Co-Founder &amp; Director</p>
+              <p class="text-muted small mb-3">Former systems architect dedicated to fostering robust local technical capabilities.</p>
+              <div class="d-flex justify-content-center gap-2">
+                <a href="#" class="social-btn" aria-label="GitHub Profile"><i class="fa-brands fa-github"></i></a>
+                <a href="#" class="social-btn" aria-label="LinkedIn Profile"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" class="social-btn" aria-label="X Profile"><i class="fa-brands fa-x-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="card h-100 border-0 text-center team-card">
+            <div class="pt-3"><img src="images/photo33.jpg" alt="Natnael Tamrat Profile Avatar" class="rounded-circle team-avatar shadow-sm"></div>
+            <div class="card-body">
+              <h5 class="fw-bold mb-1">Natnael Tamrat</h5>
+              <p class="text-success small fw-semibold uppercase mb-2 text-black">Technical Lead</p>
+              <p class="text-muted small mb-3">Full-stack specialist focusing on high-concurrency database deployments.</p>
+              <div class="d-flex justify-content-center gap-2 ">
+                <a href="#" class="social-btn" aria-label="GitHub Profile"><i class="fa-brands fa-github"></i></a>
+                <a href="#" class="social-btn" aria-label="LinkedIn Profile"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" class="social-btn" aria-label="X Profile"><i class="fa-brands fa-x-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="card h-100 border-0 text-center team-card">
+            <div class="pt-3"><img src="images/newpicwebclass.jpg" alt="Eyosias Daniel Profile Avatar" class="rounded-circle team-avatar shadow-sm"></div>
+            <div class="card-body">
+              <h5 class="fw-bold mb-1">Eyosias Daniel</h5>
+              <p class="text-success small fw-semibold uppercase mb-2 text-black">Community Growth Manager</p>
+              <p class="text-muted small mb-3">Organizes impactful student developer initiatives and collaborative hackathons.</p>
+              <div class="d-flex justify-content-center gap-2">
+                <a href="#" class="social-btn" aria-label="GitHub Profile"><i class="fa-brands fa-github"></i></a>
+                <a href="#" class="social-btn" aria-label="LinkedIn Profile"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" class="social-btn" aria-label="X Profile"><i class="fa-brands fa-x-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="card h-100 border-0 text-center team-card">
+            <div class="pt-3"><img src="images/newphotoforweb.jpg" alt="Abenezer Nebyu Profile Avatar" class="rounded-circle team-avatar shadow-sm"></div>
+            <div class="card-body">
+              <h5 class="fw-bold mb-1">Abenezer Nebyu</h5>
+              <p class="text-success small fw-semibold uppercase mb-2 text-black">Infrastructure Engineer</p>
+              <p class="text-muted small mb-3">Maintains distributed hosting nodes and coordinates cloud network optimization.</p>
+              <div class="d-flex justify-content-center gap-2">
+                <a href="#" class="social-btn" aria-label="GitHub Profile"><i class="fa-brands fa-github"></i></a>
+                <a href="#" class="social-btn" aria-label="LinkedIn Profile"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" class="social-btn" aria-label="X Profile"><i class="fa-brands fa-x-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" class="py-5 bg-light">
+    <div class="container py-4">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Simple, Scalable Tiers</h2>
+        <p class="text-muted col-md-6 mx-auto">Get connected at the price point that suits your professional goals.</p>
+      </div>
+      <div class="row g-4 justify-content-center">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 border-0 shadow-sm p-4 text-center">
+            <div class="card-body">
+              <h4 class="fw-bold">Community Tier</h4>
+              <div class="my-3"><span class="display-6 fw-bold">Free</span></div>
+              <p class="text-muted">Standard access to community boards, technical channels, and public profile hosting.</p>
+              <a href="#contact" class="btn btn-outline-primary w-100 mt-3 rounded-pill">Get Started</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 border-success border p-4 text-center shadow">
+            <div class="card-body">
+              <span class="badge bg-primary mb-2 text-uppercase">Recommended</span>
+              <h4 class="fw-bold">Professional Pro</h4>
+              <div class="my-3"><span class="display-6 fw-bold">ETB 450</span><small class="text-muted">/mo</small></div>
+              <p class="text-muted">Direct contact channels with international mentors, access to full jobs board data, and workshop discounts.</p>
+              <a href="#contact" class="btn btn-success-custom w-100 mt-3 rounded-pill">Upgrade Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="py-5 bg-light-grey" style="background-color: #fcfdfe">
+    <div class="container py-4">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Frequently Asked Questions</h2>
+        <p class="text-muted">Clear answers concerning profile registration parameters and networking access rules.</p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-8">
+          <div class="accordion shadow-sm" id="faqAccordion">
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">How do I join the EthioConnect platform?</button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-muted">Simply fill out our contact form below or click the "Join the Network" button to receive an instant authentication entry token. You can select either our Community or Professional tiers based on your needs.</div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Is platform registration entirely free?</button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-muted">Yes! The baseline Community Tier is completely free for local software engineering students and working developers. We offer advanced Pro subscriptions for specialized job matching metrics.</div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">What urban centers and cities are covered within Ethiopia?</button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-muted">While our primary technical nodes originate in Addis Ababa, we host chapter channels spanning Adama, Dire Dawa, Bahir Dar, Hawassa, Mekelle, Gondar, and Bishoftu.</div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">How can corporations or recruiters post target positions?</button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-muted">Firms can submit targeted requests via the inquiry dropdown by choosing "Partnership". Our community growth leads will verify company licensing credentials within 24 hours.</div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFive">
+                <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">Are there specialized channels for group open-source projects?</button>
+              </h2>
+              <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-muted">Absolutely. We provide specific internal repository links and team code review setups for group work, allowing local engineering teams to deploy regional systems efficiently.</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-5 bg-white">
+    <div class="container py-4">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Get In Touch</h2>
+        <p class="text-muted col-md-6 mx-auto">Have inquiries or ready to configure your profile? Drop us an architectural message below.</p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-8">
+          <form id="contactForm" autocomplete="on">
+            <div class="row g-3 mb-3">
+              <div class="col-md-6">
+                <label for="fullNameInput" class="form-label fw-semibold">Full Name</label>
+                <input type="text" class="form-control form-control-lg" id="fullNameInput" placeholder="Natnael Nebyu" required>
+              </div>
+              <div class="col-md-6">
+                <label for="emailInput" class="form-label fw-semibold">Email Address</label>
+                <input type="email" class="form-control form-control-lg" id="emailInput" placeholder="name@example.com" required>
+              </div>
+            </div>
+
+            <div class="row g-3 mb-3">
+              <div class="col-md-6">
+                <label for="citySelect" class="form-label fw-semibold">City Located</label>
+                <select class="form-select form-select-lg" id="citySelect" required>
+                  <option value="" selected disabled>Choose your city...</option>
+                  <option value="addis-ababa">Addis Ababa</option>
+                  <option value="adama">Adama</option>
+                  <option value="dire-dawa">Dire Dawa</option>
+                  <option value="bahir-dar">Bahir Dar</option>
+                  <option value="hawassa">Hawassa</option>
+                  <option value="mekelle">Mekelle</option>
+                  <option value="gondar">Gondar</option>
+                  <option value="bishoftu">Bishoftu</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label for="subjectSelect" class="form-label fw-semibold">Subject Matter</label>
+                <select class="form-select form-select-lg" id="subjectSelect" required>
+                  <option value="" selected disabled>Select a subject...</option>
+                  <option value="join">Join the Network</option>
+                  <option value="issue">Report an Issue</option>
+                  <option value="partnership">Partnership Inquiry</option>
+                  <option value="general">General Inquiry</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <label for="messageTextarea" class="form-label fw-semibold">Message Body</label>
+              <textarea class="form-control" id="messageTextarea" rows="5" placeholder="Detail your project background or career objectives here..." required></textarea>
+            </div>
+
+            <div class="d-grid">
+              <button type="submit" class="btn btn-success-custom btn-lg py-3 shadow-sm">Send Message &rarr;</button>
+            </div>
+          </form>
+
+          <p class="text-center text-muted small mt-4">We respond to all messages within 24 hours.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-dark text-white pt-5 pb-3">
+    <div class="container">
+      <div class="row g-4 mb-4">
+        <div class="col-12 col-lg-4">
+          <h5 class="fw-bold mb-3 text-primary">EthioConnect</h5>
+          <p class="text-white-50 small pe-lg-4">Building premium network infrastructures and high-impact placement tools for professional Ethiopian developers and global software engineers.</p>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <h5 class="fw-bold mb-3">Quick Links</h5>
+          <div class="row g-2 small">
+            <div class="col-6">
+              <ul class="list-unstyled">
+                <li><a href="#home" class="text-white-50 text-decoration-none">Home</a></li>
+                <li><a href="#about" class="text-white-50 text-decoration-none">About Us</a></li>
+                <li><a href="#features" class="text-white-50 text-decoration-none">Features</a></li>
+              </ul>
+            </div>
+            <div class="col-6">
+              <ul class="list-unstyled">
+                <li><a href="#team" class="text-white-50 text-decoration-none">Team</a></li>
+                <li><a href="#faq" class="text-white-50 text-decoration-none">FAQ</a></li>
+                <li><a href="#contact" class="text-white-50 text-decoration-none">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <h5 class="fw-bold mb-3">Connect Globally</h5>
+          <p class="text-white-50 small mb-3">Follow community tracks, updates, and open repositories.</p>
+          <div class="d-flex gap-2">
+            <a href="#" class="btn btn-sm btn-outline-primary px-3" aria-label="GitHub Page">GitHub</a>
+            <a href="#" class="btn btn-sm btn-outline-primary px-3" aria-label="LinkedIn Page">LinkedIn</a>
+            <a href="#" class="btn btn-sm btn-outline-primary px-3" aria-label="X Channel">X / Twitter</a>
+          </div>
+        </div>
+      </div>
+
+      <hr class="border-secondary opacity-25" />
+
+      <div class="row align-items-center pt-2">
+        <div class="col-md-6 text-center text-md-start">
+          <p class="small text-white-50 mb-0">&copy; 2025 EthioConnect. Built with Bootstrap 5.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
+          <a href="#" class="text-white-50 text-decoration-none small me-3">Privacy Policy</a>
+          <a href="#" class="text-white-50 text-decoration-none small">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const themeToggleBtn = document.getElementById("themeToggleBtn");
+    const root = document.body;
+    const storedTheme = localStorage.getItem("ethioTheme");
+
+    const applyTheme = (theme) => {
+      if (theme === "dark") {
+        root.classList.add("dark-mode");
+      } else {
+        root.classList.remove("dark-mode");
+      }
+    };
+
+    applyTheme(storedTheme === "dark" ? "dark" : "light");
+
+    themeToggleBtn?.addEventListener("click", () => {
+      const nextTheme = root.classList.contains("dark-mode") ? "light" : "dark";
+      applyTheme(nextTheme);
+      localStorage.setItem("ethioTheme", nextTheme);
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
