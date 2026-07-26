@@ -1,199 +1,295 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Abenezer Nebyu's Portfolio</title>
-    <meta name="description" content="Portfolio of Abenezer Nebyu, software engineering student at Hilcoe. Showcasing Java, database, web development projects, and skills.">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/jpg" href="images/Abenezer.jpg">
-</head>
-<body>
-    
-    <header class="main-header" id="top">
-        <div class="inner-wrapper">
-            <a class="logo" href="#top"><span class="name-bracket">ABENEZER NEBYU</span></a>
-            
-            <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
-                <img src="images/bars-solid-full.svg" alt="Menu Toggle">
-            </button>
-            <nav class="site-nav" id="site-nav" aria-label="Primary">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light mode">
-    <span class="theme-icon">🌙</span>
-</button>
-            </nav>
-        </div>
+    <meta
+      name="description"
+      content="Portfolio of Abenezer Nebyu, software engineering student at Hilcoe. Showcasing Java, database, web development projects, and skills."
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/jpg" href="images/Abenezer.jpg" />
+  </head>
+  <body id="top">
+    <header class="main-header" >
+      <div class="inner-wrapper">
+        <a class="logo" href="#top"
+          ><span class="name-bracket">ABENEZER NEBYU</span></a
+        >
+
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          <img src="images/bars-solid-full.svg" alt="Menu Toggle" />
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Primary">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+          <button
+            class="theme-toggle"
+            id="theme-toggle"
+            aria-label="Toggle light mode"
+          >
+            <span class="theme-icon">🌙</span>
+          </button>
+        </nav>
+      </div>
     </header>
 
     <main class="main-wrapper" id="main">
-        <section class="hero-section" id="home">
-            <div class="hero-content">
-                <div class="photo-container">
-                    <img src="images/Abenezer.jpg" alt="Portrait of Abenezer Nebyu" />
-                </div>
-                
-                <div class="hero-info">
-                    <h1 class="hero-title">
-                        Hi, I'm  Abenezer Nebyu , a Software Engineering student at <span><a class="university-link" href="https://hilcoe.net/" target="_blank">Hilcoe</a></span>
-                    </h1>
-                    
-                    <div class="work-icons">
-                        <ul>
-                            <li><a href="https://github.com/" target="_blank" aria-label="GitHub"><img src="images/github-brands-solid-full (2).svg" alt="GitHub Logo"></a></li>
-                            <li><a href="https://www.linkedin.com/in/abenezer-nebyu-3214b9295/" target="_blank" aria-label="LinkedIn"><img src="images/linkedin-icon.svg" alt="LinkedIn Logo"></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="tech-stack-row">
-                <span class="tech-stack-label">TECH-STACK</span>
-                <ul class="tech-icons-list">
-                    <li><img src="images/java-icon.jpg" alt="Java logo"></li>
-                    <li><img src="images/html-icon.svg" alt="HTML5 logo" ></li>
-                    <li><img src="images/css-icon.svg" alt="CSS3 logo"></li>
-                    <li><img src="images/javascript-icon.svg" alt="JavaScript logo"></li>
-                    <li><img src="images/database-solid-full.svg" alt="Database logo" ></li>
-                </ul>
-            </div>
-        </section>
+      <section class="hero-section" id="home">
+        <div class="hero-content">
+          <div class="photo-container">
+            <img src="images/Abenezer.jpg" alt="Portrait of Abenezer Nebyu" />
+          </div>
 
-      
-        <section class="about-section" id="about">
-            <div class="section-header">
-                <h2>About Me</h2>
+          <div class="hero-info">
+            <h1 class="hero-title">
+              Hi, I'm Abenezer Nebyu , a Software Engineering student at Hilcoe
+            </h1>
+
+            <div class="work-icons">
+              <ul>
+                <li>
+                  <a
+                    href="https://github.com/"
+                    target="_blank"
+                    aria-label="GitHub"
+                    ><img
+                      src="images/github-brands-solid-full (2).svg"
+                      alt="GitHub Logo"
+                  /></a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/abenezer-nebyu-3214b9295/"
+                    target="_blank"
+                    aria-label="LinkedIn"
+                    ><img src="images/linkedin-icon.svg" alt="LinkedIn Logo"
+                  /></a>
+                </li>
+              </ul>
             </div>
-            <div class="about-container">
-                <p class="about-text">
-                    I am an ambitious Software Engineering student at Hilcoe School of Computer Science and technology. I work on designing and building efficient backend systems, database management, and responsive front-end experiences. With a strong academic background and hands-on programming expertise, I strive to build software that is not only functional but highly optimized and visually polished. I love learning new technologies, refining my coding practices, and tackling challenging architectural problems.
-                </p>
+          </div>
+        </div>
+
+        <div class="tech-stack-row">
+          <span class="tech-stack-label">TECH-STACK</span>
+          <ul class="tech-icons-list">
+            <li><img src="images/java-icon.jpg" alt="Java logo" /></li>
+            <li><img src="images/html-icon.svg" alt="HTML5 logo" /></li>
+            <li><img src="images/css-icon.svg" alt="CSS3 logo" /></li>
+            <li>
+              <img src="images/javascript-icon.svg" alt="JavaScript logo" />
+            </li>
+            <li>
+              <img src="images/database-solid-full.svg" alt="Database logo" />
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="about-section" id="about">
+        <div class="section-header">
+          <h2>About Me</h2>
+        </div>
+        <div class="about-container">
+          <p class="about-text">
+            I am an ambitious Software Engineering student at Hilcoe School of
+            Computer Science and technology. I work on designing and building
+            efficient backend systems and responsive front-end systems . With a
+            strong academic background and hands-on programming experience , I
+            build software that is functional , visually polished and optimized.
+            I love learning new technologies, refining my coding practices, and
+            tackling challenging problems.
+          </p>
+        </div>
+      </section>
+
+      <section class="projects-section" id="projects">
+        <div class="section-header">
+          <h2>Projects</h2>
+        </div>
+
+        <div class="projects-container">
+          <div class="project-card">
+            <div class="project-image-wrapper">
+              <img src="images/myappleproject.jpg" class="project-image" />
             </div>
-        </section>
-        
-        <section class="projects-section" id="projects">
-            <div class="section-header">
-                <h2> Projects</h2>
+            <div class="project-details">
+              <h3 class="project-title">Apple Website replica</h3>
+              <p class="project-description">
+                This is a responsive replica of the july 9th Apple website done
+                for academic purposes only.
+              </p>
+              <div class="project-tech-tags">
+                <span class="language-used">HTML</span>
+                <span class="language-used">CSS</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://github.com/abenezer67/Apple-responsive.git"
+                  target="_blank"
+                  class="project-link-btn"
+                  >Github repo</a
+                >
+                <a
+                  href="The new apple/index.html"
+                  target="_blank"
+                  class="project-link-btn"
+                  >Live Demo</a
+                >
+              </div>
             </div>
-            
-            <div class="projects-container">
-               
-                <div class="project-card">
-                    <div class="project-image-wrapper">
-                        <img src="images/myappleproject.jpg"  class="project-image">
-                    </div>
-                    <div class="project-details">
-                        <h3 class="project-title">Apple Website replica</h3>
-                        <p class="project-description">
-                            This is a responsive Apple website done for academic purposes only.
-                        </p>
-                        <div class="project-tech-tags">
-                            <span class="language-used">HTML</span>
-                            <span class="language-used">CSS</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/abenezer67/Apple-responsive.git" target="_blank" class="project-link-btn">Github repo</a>
-                            <a href="The new apple/index.html" target="_blank" class="project-link-btn">Live Demo</a>
+          </div>
 
-                        </div>
-                    </div>
-                </div>
-
-                
-                <div class="project-card">
-                    <div class="project-image-wrapper">
-                        <img src="images/newmcGill.jpg"  class="project-image">
-                    </div>
-                    <div class="project-details">
-                        <h3 class="project-title">MCGill university website replica</h3>
-                        <p class="project-description">
-                          This is one to one replica of the MCGill university website that is done for academic purposes only.                        </p>
-                        <div class="project-tech-tags">
-                            <span class="language-used">HTML</span>
-                            <span class="language-used">CSS</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/abenezer67/Mcgill-clone.git" target="_blank" class="project-link-btn">GitHub repo</a>
-                            <a href="Mcgill-clone-main/mcgillunifinal/index.html" target="_blank" class="project-link-btn">Live Demo</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image-wrapper">
-                        <img src="images/Ethioconnect.jpg"  class="project-image">
-                    </div>
-                    <div class="project-details">
-                        <h3 class="project-title">Simple Tetris Game</h3>
-                        <p class="project-description">
-                                   This is a functional website that is done  to show Boostrap.                  
-                                       <div class="project-tech-tags">
-                            <span class="language-used">HTML</span>
-                            <span class="language-used">CSS</span>
-                            <span class="language-used">Bootstrap</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/abenezer67/EthioConnect.git" target="_blank" class="project-link-btn">GitHub repo</a>
-                            <a href="weblabbootstrap/finalproject.html" target="_blank" class="project-link-btn">Live Demo</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image-wrapper">
-                        <img src="images/tetris.jpg"  class="project-image">
-                    </div>
-                    <div class="project-details">
-                        <h3 class="project-title">Simple Tetris Game</h3>
-                        <p class="project-description">
-                            A fully functional Tetris game engine built from scratch using C++ and the Raylib library, featuring responsive block rotations, custom grid drawing, and automated row-clearing logic </p>
-                        <div class="project-tech-tags">
-                            <span class="language-used">C++</span>
-                            <span class="language-used">raylib</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/abenezer67/opaqr.git" target="_blank" class="project-link-btn">GitHub repo</a>
-                        </div>
-                    </div>
-                </div>
+          <div class="project-card">
+            <div class="project-image-wrapper">
+              <img src="images/newmcGill.jpg" class="project-image" />
             </div>
+            <div class="project-details">
+              <h3 class="project-title">MCGill university website replica</h3>
+              <p class="project-description">
+                This is one to one replica of the MCGill university website that
+                is done for academic purposes only.
+              </p>
+              <div class="project-tech-tags">
+                <span class="language-used">HTML</span>
+                <span class="language-used">CSS</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://github.com/abenezer67/Mcgill-clone.git"
+                  target="_blank"
+                  class="project-link-btn"
+                  >GitHub repo</a
+                >
+                <a
+                  href="Mcgill-clone-main/mcgillunifinal/index.html"
+                  target="_blank"
+                  class="project-link-btn"
+                  >Live Demo</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-image-wrapper">
+              <img src="images/Ethioconnect.jpg" class="project-image" />
+            </div>
+            <div class="project-details">
+              <h3 class="project-title">EthioConnect</h3>
+              <p class="project-description">
+                EthioCnnect is a responsive digital platfrom designed to bring
+                ethiopians web devleopers and other software engineers togather,
+                this website uses html , css and bootstrap.
+              </p>
 
+              <div class="project-tech-tags">
+                <span class="language-used">HTML</span>
+                <span class="language-used">CSS</span>
+                <span class="language-used">Bootstrap</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://github.com/abenezer67/EthioConnect.git"
+                  target="_blank"
+                  class="project-link-btn"
+                  >GitHub repo</a
+                >
+                <a
+                  href="weblabbootstrap/finalproject.html"
+                  target="_blank"
+                  class="project-link-btn"
+                  >Live Demo</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-image-wrapper">
+              <img
+                src="images/tetris.jpg"
+                class="project-image"
+                id="tetris-pic"
+              />
+            </div>
+            <div class="project-details">
+              <h3 class="project-title">Simple Tetris Game</h3>
+              <p class="project-description">
+                A fully functional Tetris game engine built from scratch using
+                C++ and the Raylib library, featuring responsive block
+                rotations, custom grid drawing, and automated row-clearing logic
+              </p>
+              <div class="project-tech-tags">
+                <span class="language-used">C++</span>
+                <span class="language-used">raylib</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://github.com/abenezer67/opaqr.git"
+                  target="_blank"
+                  class="project-link-btn"
+                  >GitHub repo</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-                
-            
-        </section>
+      <section class="contact-section" id="contact">
+        <div class="section-header">
+          <h2>Get In Touch</h2>
+        </div>
 
-    <section class="contact-section" id="contact">
-    <div class="section-header">
-        <h2>Get In Touch</h2>
-    </div>
-    
-    <div class="contact-wrapper">
-        <p class="contact-title2">Have a question or want to work together?  Reach out through any of these:</p>
-        
-        <div class="contact-links">
-            <a href="mailto:nebyuabenezer070@gmail.com" class="submit-btn" target="_blank">
-                <img src="images/envelope-light-full.svg" alt="Email"> Email
+        <div class="contact-wrapper">
+          <p class="contact-title2">
+            Have a question or want to work together? Reach out through any of
+            these:
+          </p>
+
+          <div class="contact-links">
+            <a
+              href="mailto:nebyuabenezer070@gmail.com"
+              class="submit-btn"
+              target="_blank"
+            >
+              <img src="images/envelope-light-full.svg" alt="Email" /> Email
             </a>
             <a href="https://t.me/Abenant" class="submit-btn" target="_blank">
-                <img src="images/telegram-brands-solid-full.svg" alt="Telegram"> Telegram
+              <img src="images/telegram-brands-solid-full.svg" alt="Telegram" />
+              Telegram
             </a>
-            <a href="https://wa.me/qr/F5Z3U3RNUBP5E1" class="submit-btn" target="_blank">
-                <img src="images/whatsapp-brands-solid-full.svg" alt="WhatsApp"> WhatsApp
+            <a
+              href="https://wa.me/qr/F5Z3U3RNUBP5E1"
+              class="submit-btn"
+              target="_blank"
+            >
+              <img src="images/whatsapp-brands-solid-full.svg" alt="WhatsApp" />
+              WhatsApp
             </a>
+          </div>
         </div>
-    </div>
-</section>
+      </section>
+      <a href="#top" class="back-to-top" ><img src="images/angle-up-solid-full.svg" alt="" />
+      </a>
     </main>
 
-   <footer class="site-footer">
-    <div class="footer-content">
-        <p class="footer-copyright"> 2026 Abenezer Nebyu</p>
+    <footer class="site-footer">
+      <div class="footer-content">
+        <p class="footer-copyright">2026 Abenezer Nebyu</p>
         <p class="footer-location">Addis Ababa, Ethiopia</p>
-    </div>
-</footer>
+      </div>
+    </footer>
 
     <script src="logic.js"></script>
-</body>
+  </body>
 </html>
