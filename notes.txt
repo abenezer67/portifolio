@@ -1,0 +1,3 @@
+mobile hamburger toggle 
+interctive theme toggle 
+dynamic year in the footer 
