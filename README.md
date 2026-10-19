@@ -1,1 +1,10 @@
-**********This is a portifolio made with HTML , CSS and JavaScript********************
+# 🚀 My Developer Portfolio
+
+#Tech stack
+
+This portifolio was built using various web technologies
+
+- **Markup:** HTML5
+- **Styling:** CSS3 (Flexbox, Grid, Custom Properties)
+- **Scripting:** JavaScript (DOM Manipulation, Interactive Elements)
+- **Hosting & Deployment:** Netlify
